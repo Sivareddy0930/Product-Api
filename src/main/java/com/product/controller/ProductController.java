@@ -10,6 +10,7 @@ import javax.sql.rowset.serial.SerialException;
 
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +25,7 @@ import com.product.Model.Product;
 import com.product.payload.productResponseDTO;
 import com.product.service.ProductService;
 
+@CrossOrigin("http://localhost:3000/")
 @RestController
 @RequestMapping("/products")
 public class ProductController {
